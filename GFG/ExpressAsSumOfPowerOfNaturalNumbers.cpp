@@ -19,7 +19,7 @@ class Solution{
         
         int pick = 0;
         if(tar-pow(num,x)>=0){
-         pick = helper(num+1 , tar-pow(num,x), x,dp);
+            pick = helper(num+1 , tar-pow(num,x), x,dp);
         }
         int notpick = helper(num+1, tar, x, dp);
         return dp[num][tar]=(pick + notpick) % (int)(1e9 + 7);
